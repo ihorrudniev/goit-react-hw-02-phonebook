@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropType from "prop-types";
 import shortid from "shortid";
 import "./Form.css";
 
@@ -72,5 +73,7 @@ class Form extends Component {
     );
   }
 }
+
+Form.PropType = { onSubmit: PropType.func.isRequired };
 
 export default Form;

@@ -1,4 +1,5 @@
 import ContactItem from "./ContactsListItem";
+import PropTypes from "prop-types";
 import "./ContactsList.css";
 
 const ContactsList = ({ findContact, onDeleteContact }) => {
@@ -17,6 +18,11 @@ const ContactsList = ({ findContact, onDeleteContact }) => {
       })}
     </ul>
   );
+};
+
+ContactsList.prototype = {
+  findContact: PropTypes.func.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactsList;

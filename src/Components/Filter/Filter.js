@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropType from "prop-types";
 import "./Filter.css";
 
 class Filter extends Component {
@@ -17,5 +18,10 @@ class Filter extends Component {
     );
   }
 }
+
+Filter.PropType = {
+  value: PropType.string,
+  onChange: PropType.func.isRequired,
+};
 
 export default Filter;
