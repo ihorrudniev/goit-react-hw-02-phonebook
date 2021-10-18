@@ -1,8 +1,9 @@
 import ContactItem from "./ContactsListItem";
+import "./ContactsList.css";
 
 const ContactsList = ({ findContact, onDeleteContact }) => {
   return (
-    <ul>
+    <ul className="ContactsList__item">
       {findContact().map(({ id, name, number }) => {
         return (
           <ContactItem

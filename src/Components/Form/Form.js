@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import shortid from "shortid";
+import "./Form.css";
 
 class Form extends Component {
-  state = { name: "", number: "" };
+  state = {
+    name: "",
+    number: "",
+  };
 
   nameInputId = shortid.generate();
   numberInputId = shortid.generate();
@@ -34,8 +38,8 @@ class Form extends Component {
     const { name, number } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor={this.nameInputId}>
+      <form className="Form" onSubmit={this.handleSubmit}>
+        <label className="Form__label" htmlFor={this.nameInputId}>
           Name{" "}
           <input
             type="text"
@@ -50,7 +54,7 @@ class Form extends Component {
           />
         </label>
         <br />
-        <label htmlFor={this.numberInputId}>
+        <label className="Form__label" htmlFor={this.numberInputId}>
           Number{" "}
           <input
             type="tel"

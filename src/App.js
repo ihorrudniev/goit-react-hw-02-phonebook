@@ -3,6 +3,7 @@ import Form from "./Components/Form";
 import Filter from "./Components/Filter";
 import Container from "./Components/Container";
 import ContactsList from "./Components/ContactsList";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -70,12 +71,12 @@ class App extends Component {
 
     return (
       <Container>
-        <h1>Phonebook</h1>
+        <h1 className="App__title">Phonebook</h1>
 
         <Form onSubmit={this.addContact} />
 
         <div>
-          <h2>Contacts</h2>
+          <h1 className="App__title">Contacts</h1>
           <Filter value={filter} onChange={this.changeFilter} />
           <ContactsList
             findContact={this.findContact}
